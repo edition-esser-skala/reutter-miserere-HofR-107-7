@@ -38,7 +38,7 @@
 \layout {
   \context {
     \Staff
-    instrumentName = "b"
+    instrumentName = "trb 2"
   }
 }
 
@@ -47,12 +47,12 @@
     \header {
       title = "M I S E R E R E"
     }
-    \paper { indent = 2\cm }
+    \paper { indent = 2.5\cm }
     \score {
       <<
         \new Staff {
-          \set Staff.instrumentName = "Bassi"
-          \Organo
+          \set Staff.instrumentName = "Trombone II"
+          \TromboneII
         }
       >>
     }

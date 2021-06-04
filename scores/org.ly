@@ -45,8 +45,7 @@
 \book {
   \bookpart {
     \header {
-      number = "1"
-      title = "F I R S T"
+      title = "M I S E R E R E"
     }
     \paper { indent = 2\cm }
     \score {
@@ -55,18 +54,6 @@
           \set Staff.instrumentName = "Organo"
           \Organo
         }
-        \new FiguredBass { \BassFigures }
-      >>
-    }
-  }
-  \bookpart {
-    \header {
-      number = "2"
-      title = "S E C O N D"
-    }
-    \score {
-      <<
-        \new Staff { \Organo }
         \new FiguredBass { \BassFigures }
       >>
     }
