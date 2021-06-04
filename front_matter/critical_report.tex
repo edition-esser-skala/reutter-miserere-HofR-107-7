@@ -196,8 +196,8 @@
 \newif\ifprintreport\printreportfalse
 \directlua{
 scores = {
-  ob1 = "Trombone I",
-  ob2 = "Trombone II",
+  trb1 = "Trombone I",
+  trb2 = "Trombone II",
   vl1 = "Violino I",
   vl2 = "Violino II",
   coro = "Coro",
@@ -217,10 +217,9 @@ if not (scores[last_arg] == nil) then
 end
 }
 
-% uncomment if the full score is in landscape format
-%\ifprintreport
-%\geometry{landscape,outer=127mm}
-%\fi
+\ifprintreport
+\geometry{landscape,outer=127mm}
+\fi
 
 \@ifundefined{lypdfname}{%
   \templatefalse
@@ -241,7 +240,7 @@ end
 \namesuffix{der Jüngere}
 \title{Miserere}
 \subtitle{HofR 107/7\\(A-Ed G 117)}
-\scoring{S, A, T, B (solo), S, A, T, B (coro), 2 trb, 2 vl, b, org}
+\scoring{S, A, T, B (coro), 2 trb, 2 vl, b, org}
 \maketitle
 
 
