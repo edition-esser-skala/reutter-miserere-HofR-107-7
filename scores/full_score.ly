@@ -1,23 +1,12 @@
 \version "2.22.0"
 
 \include "../definitions.ly"
-
-\paper {
-  #(set-paper-size "a4landscape")
-  top-margin = 1\cm
-  bottom-margin = .5\cm
-  outer-margin = 2\cm
-  inner-margin = 1.5\cm
-  indent = 1\cm
-}
-
-#(set-global-staff-size 15.87)
+\include "score_settings/full-score.ly"
 
 \book {
   \bookpart {
-    \header {
-      title = "M I S E R E R E"
-    }
+    \section "Miserere"
+    \addTocEntry
     \paper { indent = 3\cm }
     \score {
       <<
@@ -49,25 +38,19 @@
         >>
         \new ChoirStaff <<
           \new Staff {
-            \set Staff.instrumentName = \SopranoIncipit
-            \override Staff.InstrumentName.self-alignment-Y = ##f
-            \override Staff.InstrumentName.self-alignment-X = #RIGHT
+            \incipitSoprano
             \new Voice = "Soprano" { \dynamicUp \SopranoNotes }
           }
           \new Lyrics \lyricsto Soprano \SopranoLyrics
 
           \new Staff {
-            \set Staff.instrumentName = \AltoIncipit
-            \override Staff.InstrumentName.self-alignment-Y = ##f
-            \override Staff.InstrumentName.self-alignment-X = #RIGHT
+            \incipitAlto
             \new Voice = "Alto" { \dynamicUp \AltoNotes }
           }
           \new Lyrics \lyricsto Alto \AltoLyrics
 
           \new Staff {
-            \set Staff.instrumentName = \TenoreIncipit
-            \override Staff.InstrumentName.self-alignment-Y = ##f
-            \override Staff.InstrumentName.self-alignment-X = #RIGHT
+            \incipitTenore
             \new Voice = "Tenore" { \dynamicUp \TenoreNotes }
           }
           \new Lyrics \lyricsto Tenore \TenoreLyrics
